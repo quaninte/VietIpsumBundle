@@ -1,0 +1,4 @@
+composer.lock
+.idea
+phpunit.xml
+Tests/autoload.php

@@ -57,6 +57,9 @@ class Dictionary
         $array = array_unique(explode(' ', $str));
         $this->words = array();
         foreach ($array as $word) {
+            if (strlen($word) < 2) {
+                continue;
+            }
             $this->words[] = $word;
         }
     }

@@ -22,19 +22,19 @@ class GenerateCommand extends ContainerAwareCommand
         $this
             ->setName('vietipsum:generate')
             ->setDescription('Generate a paragraph')
-
+            ->addArgument('paragraph-length', InputArgument::OPTIONAL, 'How many paragraphs do you want to generate?', 5)
         ;
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $dictionaryPath = dirname(dirname(__FILE__)) . '/Resources/dictionaries/viet-food.txt';
+        $dictionaryPath = dirname(dirname(__FILE__)) . '/Resources/dictionaries/dictionary.txt';
 
         $dictionary = new Dictionary();
         $dictionary->readFromFile($dictionaryPath);
 
         $generator = new Generator($dictionary);
-        $str = $generator->generate(3);
+        $str = $generator->generate($input->getArgument('paragraph-length'));
 
         $output->writeln($str);
     }

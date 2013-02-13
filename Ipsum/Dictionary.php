@@ -31,7 +31,7 @@ class Dictionary
 
         $word = $this->words[$i];
         if ($cap) {
-            $word = ucfirst($word);
+            $word = mb_strtoupper(mb_substr($word, 0, 1, 'UTF-8'), 'UTF-8') . mb_substr($word, 1, strlen($word) - 1, 'UTF-8');
         }
 
         return $word;
@@ -51,7 +51,7 @@ class Dictionary
      * Create dictionary from string
      * @param $str
      */
-    protected function createFromString($str)
+    public function createFromString($str)
     {
         $str = $this->cleanContent($str);
         $array = array_unique(explode(' ', $str));

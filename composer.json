@@ -1,0 +1,23 @@
+{
+    "name": "brodev/viet-ipsum-bundle",
+    "type": "symfony-bundle",
+    "description": "Generate lorem ipsum text with changeable dictionary",
+    "keywords": ["lorem ipsum", "vietnamese", "lorem", "ipsum"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Quan MT",
+            "email": "info@brodev.com"
+        }
+    ],
+    "require": {
+        "php":                      ">=5.3.3",
+        "symfony/framework-bundle": ">=2.0"
+    },
+    "target-dir": "Brodev/Bundle/VietIpsumBundle",
+    "autoload": {
+        "psr-0": {
+            "Brodev\\Bundle\\VietIpsumBundle": ""
+        }
+    }
+}

@@ -14,10 +14,10 @@
         "php":                      ">=5.3.3",
         "symfony/framework-bundle": ">=2.0"
     },
-    "target-dir": "Brodev/Bundle/VietIpsumBundle",
+    "target-dir": "Brodev/VietIpsumBundle",
     "autoload": {
         "psr-0": {
-            "Brodev\\Bundle\\VietIpsumBundle": ""
+            "Brodev\\VietIpsumBundle": ""
         }
     }
 }
